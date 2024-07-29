@@ -1,0 +1,700 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Tilt+Prism&display=swap');
+
+
+/* custom css file made by JeanDoe */
+
+/* initaialisation */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+
+/*  declaration of variables  */
+:root{
+    --main-clr:  #7183b0;
+    --second-clr: #567;
+    --light-bg: #f1e1d1;
+    --white-bg: #f9fafa;
+    --second-bg: #e5e5e5;
+    --white: #fff;
+    --black: #1a1b1c;
+    --light-clr: rgba(0, 0, 0, .5);
+    --body-font: 'Roboto', Arial, sans-serif;
+    --title-font: 'Tilt Prism', Arial, serif;
+    --box-shadow: 0 2px 2px rgba(0,0,0,.5);
+    --border: 1px solid rgba(0, 0, 0, .1);
+    --gray: #d2d2d2;
+}
+
+/* base */
+
+html{
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--white);
+    font-weight: normal;
+    font-size: 0.938rem;
+    font-family: var(--body-font);
+    color: var(--black);
+}
+
+/*  dark and light theme */
+
+body.dark{
+    --light-bg: #2f2f1f;
+    --white-bg: #141414;
+    --second-bg: #2b2b2b;
+    --white: #1a1b1c;
+    --black: #fff;
+    --light-clr: rgba(255, 255, 255, .5);
+    --border: 1px solid rgba(255, 255, 255, .1);
+}
+
+/* reusables classes */
+
+.container{
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heading{
+    font-size: 1.5rem;
+    color: var(--black);
+    text-transform: capitalize;
+    padding-bottom: 0.5rem;
+    border-bottom: 5px solid var(--main-clr);
+    max-width: 15rem;
+    margin-bottom: 1rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-transform: capitalize;
+    transition: all .2s ease;
+    color: var(--main-clr);
+    border: 2px solid var(--main-clr);
+    background: var(--white);
+    border-radius: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+.btn:hover{
+    background: var(--main-clr);
+    color: var(--white);
+    box-shadow: var(--box-shadow);
+}
+
+#theme-btn{
+    font-size: 1.2rem;
+    color: var(--main-clr);
+    padding: 0.3rem 0.5rem;
+    border-radius: .5rem;
+    border: 1px solid var(--main-clr);
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+.link{
+    color: var(--light-clr);
+    text-transform: capitalize;
+}
+
+.link:hover{
+    text-decoration: underline var(--main-clr);
+}
+
+
+/* header section starts */
+
+.header{
+    background: var(--main-clr);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.header .intro{
+    position: relative;
+}
+
+.header h1{
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: var(--title-font);
+    display: inline-block;
+}
+
+.header .intro span:nth-of-type(1){
+    font-size: 5rem;
+    display: inline-block;
+}
+
+.header .intro span:nth-of-type(1) img{
+    height: 2rem;
+    float: right;
+}
+
+.header .intro span:nth-of-type(2){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header .intro span:nth-of-type(3){
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.header .sub_header{
+    position: relative;
+}
+
+.header .sub_header div{
+    background: var(--main-clr);
+    position: absolute;
+    bottom: -6rem;
+    min-height: 2rem;
+    width: 30%;
+    border-radius: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header p{
+    text-transform: uppercase;
+}
+
+.header a{
+    display: inline-block;
+    position: absolute;
+    top: 110%;
+    color: var(--main-clr);
+    font-size: 1.4rem;
+}
+
+/*  home section starts */
+
+.home{
+    
+}
+
+.home .content{
+    overflow: auto;
+}
+
+.home .content p{
+    float: left;
+    display: inline-block;
+    clear: left;
+    max-width: 25rem;
+    text-align: justify;
+    margin-right: 2rem;
+}
+
+
+.home .flag_box{
+    float: right;
+    /* display: inline-block; */
+    background: var(--gray);
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.home .flag_box .infos{
+    float: right;
+    margin: 1rem 0;
+}
+
+.home .flag_box .infos h3{
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.home .flag_box .infos span{
+    font-style: italic;
+}
+.home .flag{
+    display: grid;
+    grid-template-columns: repeat(3, 7rem);
+    
+}
+.home .flag div{
+    height: 12rem;
+}
+
+.home .flag div:nth-of-type(1){
+    background: #027322;
+}
+
+.home .flag div:nth-of-type(2){
+    background: #ce1026;
+    display: grid;
+    place-content: center;
+}
+
+.home .flag div:nth-of-type(2) i{
+    color: #fcd116;
+    font-size: 3rem;
+}
+
+.home .flag div:nth-of-type(3){
+    background: #fcd116;
+}
+
+/* national section starts */
+
+.national{
+
+}
+
+.national h3{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* flags section starts */
+
+.flags{
+    
+}
+
+.flags h2{
+    margin-bottom: 3rem;
+}
+
+.flags .box_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 15rem);
+    justify-content: center;
+    gap: 2rem;
+}
+
+.flags .box{
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.flags .box h3{
+    color: var(--main-clr);
+    text-transform: capitalize;
+    background: var(--white-bg);
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.938rem;
+}
+
+.flags .box .flag > div{
+    height: 8rem;
+}
+
+/* flag of cote d'ivoire */
+
+.flags .box:nth-of-type(1) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.flags .box:nth-of-type(1) .flag div:nth-of-type(1){
+    background: #f77f00;
+}
+
+.flags .box:nth-of-type(1) .flag div:nth-of-type(2){
+    background: #fff;
+}
+
+.flags .box:nth-of-type(1) .flag div:nth-of-type(3){
+    background: #009e60;
+}
+
+/* flag of china */
+
+.flags .box:nth-of-type(2) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.flags .box:nth-of-type(2) .flag div:nth-of-type(1){
+    background:  #de2910;
+    position: relative;
+}
+
+.flags .box:nth-of-type(2) .flag i{
+    color: #fdda24;
+    position: absolute;
+}
+
+.flags .box:nth-of-type(2) .flag i:nth-of-type(1){
+    top: .7rem;
+    left: .5rem;
+    font-size: 1.7rem;
+}
+
+.flags .box:nth-of-type(2) .flag i:nth-of-type(2){
+    top: .5rem;
+    left: 2.5rem;
+    font-size: 0.5rem;
+}
+
+.flags .box:nth-of-type(2) .flag i:nth-of-type(3){
+    top: 1rem;
+    left: 3rem;
+    font-size: 0.5rem;
+}
+
+.flags .box:nth-of-type(2) .flag i:nth-of-type(4){
+    top: 2rem;
+    left: 3rem;
+    font-size: 0.5rem;
+}
+
+.flags .box:nth-of-type(2) .flag i:nth-of-type(5){
+    top: 2.5rem;
+    left: 2.5rem;
+    font-size: 0.5rem;
+}
+
+/* flag of congo */
+
+.flags .box:nth-of-type(3) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.flags .box:nth-of-type(3) .flag div{
+    background:  #00a3e0;
+    position: relative;
+    overflow: hidden;
+}
+
+.flags .box:nth-of-type(3) .flag i{
+    color: #ffee00;
+    position: absolute;
+    top: .7rem;
+    left: .5rem;
+    font-size: 1.7rem;
+}
+
+.flags .box:nth-of-type(3) .flag div div{
+    background: #fd4238;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    rotate: -25deg;
+    font-size: 1.7rem;
+    height: 2rem;
+    border:  2px solid #ffee00;
+    width: 130%;
+}
+
+/* flag cuba */
+
+.flags .box:nth-of-type(4) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.flags .box:nth-of-type(4) .flag div{
+    background:  #00205b;
+    position: relative;
+    overflow: hidden;
+}
+
+.flags .box:nth-of-type(4) .flag i{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1rem;
+    font-size: 1.7rem;
+    z-index: 3;
+}
+
+.flags .box:nth-of-type(4) .flag div div:nth-of-type(1){
+    background: #fd4238;
+    position: absolute;
+    left: -5rem;
+    top: -.2rem;
+    bottom: 0;
+    height: 8rem;
+    width: 8rem;
+    transform: skew(20deg);
+    rotate: -37deg;
+    border-radius: .25rem;
+    z-index: 2;
+}
+
+.flags .box:nth-of-type(4) .flag div div:nth-of-type(2){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20%;
+    height: 20%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(4) .flag div div:nth-of-type(3){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20%;
+    height: 20%;
+    width: 100%;
+}
+
+/* czech republic flag */
+
+.flags .box:nth-of-type(5) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.flags .box:nth-of-type(5) .flag div{
+    background:  #00205b;
+    position: relative;
+    overflow: hidden;
+}
+
+.flags .box:nth-of-type(5) .flag div div:nth-of-type(1){
+    background: #004b87;
+    position: absolute;
+    left: -5rem;
+    top: -.2rem;
+    bottom: 0;
+    height: 8rem;
+    width: 8rem;
+    transform: skew(20deg);
+    rotate: -34deg;
+    border-radius: .25rem;
+    z-index: 2;
+}
+
+.flags .box:nth-of-type(5) .flag div div:nth-of-type(2){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(5) .flag div div:nth-of-type(3){
+    background: #e4002b;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+}
+
+/* greece flag */
+
+.flags .box:nth-of-type(6) .flag{
+    padding: 1rem;
+    background: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.flags .box:nth-of-type(6) .flag div{
+    background: #0033a0;
+    position: relative;
+    overflow: hidden;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(1){
+    background: #0033a0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 4rem;
+    z-index: 2;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(1) div:nth-of-type(1){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 53%;
+    transform: translateY(-50%);
+    height: 20%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(1) div:nth-of-type(2){
+    background: #fff;
+    position: absolute;
+    left: -.5rem;
+    height: .9rem;
+    width: 4rem;
+    rotate: 90deg;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(2){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 13%;
+    height: 10%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(3){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 33%;
+    height: 10%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(4){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 33%;
+    height: 10%;
+    width: 100%;
+}
+
+.flags .box:nth-of-type(6) .flag div div:nth-of-type(5){
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 13%;
+    height: 10%;
+    width: 100%;
+}
+
+
+
+/* korea South flag */
+
+.flags .box:nth-of-type(7) .flag{
+    padding: 1rem;
+    background: var(--gray);
+}
+
+.flags .box:nth-of-type(7) .flag > div{
+    background:  #fff;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+    place-items: center;
+}
+
+.flags .box:nth-of-type(7) .flag div img{
+    height: 3rem;
+}
+
+.flags .box:nth-of-type(7) .flag div div:nth-of-type(1){
+
+}
+
+.flags .box:nth-of-type(7) .flag div div:nth-of-type(2){
+
+}
+
+.flags .box:nth-of-type(7) .flag div div:nth-of-type(3){
+    
+}
+
+/* Bahrain flag */
+
+.flags .box:nth-of-type(8) .flag{
+    padding: 1rem;
+    background: var(--gray);
+}
+
+.flags .box:nth-of-type(8) .flag > div{
+    background:  #da291c;
+    position: relative;
+    overflow: hidden;
+}
+
+.flags .box:nth-of-type(8) .flag div div{
+    background: #fff;
+    height: 1.6rem;
+    width: 5rem;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+
+/* brazil  flag */
+
+.flags .box:nth-of-type(9) .flag{
+    padding: 1rem;
+    background: var(--gray);
+}
+
+.flags .box:nth-of-type(9) .flag > div{
+    background:  #009639;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-content: center;
+    place-items: center;
+}
+
+.flags .box:nth-of-type(9) .flag div img{
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.flags .box:nth-of-type(9) .flag div div{
+    background: #ffe000;
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    transform: skew(20deg);
+    rotate: -36deg;
+    border-radius: .25rem;
+    z-index: 0;
+}
